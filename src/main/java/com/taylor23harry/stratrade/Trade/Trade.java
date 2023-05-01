@@ -5,13 +5,15 @@ import java.time.LocalDateTime;
 import com.taylor23harry.stratrade.helpers.helpers;
 
 public class Trade {
-    private String id;
+    private final String id;
+    private final String ticker;
+    private final String currency;
+
     private LocalDateTime entry;
     private LocalDateTime exit;
     private float profit;
-    private String currency;
     private float position_size;
-    private String ticker;
+
     
     /* Constructor */
     public Trade(
@@ -33,10 +35,6 @@ public class Trade {
     /* Getters and Setters */
     public String getId() {
         return this.id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public LocalDateTime getEntry() {
@@ -67,10 +65,6 @@ public class Trade {
         return this.currency;
     }
 
-    public void setCurrency(String currency) {
-        this.currency = currency;
-    }
-
     public float getPosition_size() {
         return this.position_size;
     }
@@ -83,8 +77,5 @@ public class Trade {
         return this.ticker;
     }
 
-    public void setTicker(String ticker) {
-        this.ticker = ticker;
-    }
 
 }
